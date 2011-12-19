@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Subdomains
-Plugin URI: http://pankajanupam.in/wordpress-plugin/
+Plugin URI: http://pankajanupam.in/wordpress-plugins/subdomains/
 Description: Use selecttive categories as subdomain
 Version: 0.1
 Author: PANKAJ ANUPAM

@@ -13,15 +13,18 @@ Subdomains allows users to setup there main categories as subdomains. It's a lit
 Subdomains allows users to setup there main categories as subdomains. It's a lite and fast code.
 It's setup all main categories as subdomains.
 
+Please leave a commment at http://pankajanupam.in/wordpress-plugins/subdomains/ for any issue & help me to improve the plugin.
+I will relay within 4 hours.
+
 Note: Please set permalinks to /%category%/%postname%/
 
 == Installation ==
 
-You can install Shortcodes in Sidebar Widgets directly from the WordPress admin panel.
-Visit the Plugins > Add New page and search for 'Shortcodes in Sidebar'.
+You can install Subdomains directly from the WordPress admin panel.
+Visit the Plugins > Add New page and search for 'Subdomains'.
 Click to install. Once installed, activate and it is functional.
 
-Manual Installation Shortcodes in Sidebar Widgets plugin:
+Manual Installation Subdomains plugin:
 
     Download and unzip the file
 
@@ -45,3 +48,4 @@ None
 == Changelog ==
 
 = 0.1 =
+Beta Release
