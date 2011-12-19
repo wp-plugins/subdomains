@@ -1,10 +1,8 @@
 === Plugin Name ===
-Contributors: PANKAJ ANUPAM
-Donate link: #
+Contributors: pankajanupam
 Tags: subdomains, categories, subdomain
 Requires at least: 2.8
 Tested up to: 3.3
-Stable tag: #
 
 Subdomains allows users to setup there main categories as subdomains. It's a lite and fast code.
 
