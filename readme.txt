@@ -21,7 +21,7 @@ Note: Please set permalinks to /%category%/%postname%/
 == Installation ==
 
 You can install Subdomains directly from the WordPress admin panel.
-Visit the Plugins > Add New page and search for 'Subdomains'.
+Visit the Plugins > Add New and search for 'Subdomains'.
 Click to install. Once installed, activate and it is functional.
 
 Manual Installation Subdomains plugin:
