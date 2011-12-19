@@ -14,7 +14,7 @@ Subdomains allows users to setup there main categories as subdomains. It's a lit
 It's setup all main categories as subdomains.
 
 Please leave a commment at http://pankajanupam.in/wordpress-plugins/subdomains/ for any issue & help me to improve the plugin.
-I will relay within 4 hours.
+I will reply within 4 hours.
 
 Note: Please set permalinks to /%category%/%postname%/
 
