@@ -3,7 +3,7 @@
 Plugin Name: Subdomains
 Plugin URI: http://pankajanupam.in/wordpress-plugins/subdomains/
 Description: Use selecttive categories as subdomain
-Version: 0.2
+Version: 0.3
 Author: PANKAJ ANUPAM
 Author URI: http://pankajanupam.in
 
@@ -39,7 +39,7 @@ class subSubdomain{
         $this->slug = $domain[0];
         return get_category_by_slug($this->slug);
     }
-    
+
     function getRewriteRules(){
         $rules = array();
 	$rules["feed/(feed|rdf|rss|rss2|atom)/?$"] = "index.php?" . $this->field . "=" . $this->slug . "&feed=\$matches[1]";
@@ -61,7 +61,7 @@ class initPlugin extends subSubdomain{
      //   add_filter( 'rewrite_rules_array', 'wps_rewrite_rules' );
         add_filter( 'category_rewrite_rules', 'sub_category_rewrite_rules' );
         add_filter( 'post_rewrite_rules', 'sub_post_rewrite_rules' );
-        
+
         add_filter( 'category_link', 'sub_category_link', 10, 2 );
         add_filter( 'post_link', 'sub_post_link', 10, 2 );
     }
@@ -118,12 +118,13 @@ $rules = array ();
 }
 
 function sub_category_link( $link, $term_id ) { //print_r($link);}
-    $link = preg_replace('/(?<=http\:\/\/)([a-z0-9_\-\.]+)\/category(.*)\/([a-z0-9_\-]+)/','$3.$1$2/', $link);
+    $link = preg_replace('/(?<=http\:\/\/)([a-z0-9_\-\.]+)\/category(.*)\/([a-z0-9_\-]+)/','$3.$1', $link);
     return $link;
 }
 
 function sub_post_link( $link, $id ){
-   $link = preg_replace('/(?<=http\:\/\/)([a-z0-9_\-\.]+)\/([a-z0-9\-\_]+)\/(.*)/','$2.$1/$3', $link);
+   $link = preg_replace('/(?<=http\:\/\/)([a-z0-9_\-\.]+)\/(.*)\/([a-z0-9\-\_]+)\/([a-z0-9\-\_]+)/','$3.$1/$4', $link);
+   $link = preg_replace('/(?<=http\:\/\/)([a-z0-9_\-\.]+)\/([a-z0-9\-\_]+)\/([a-z0-9\-\_]+)/','$2.$1/$3', $link);
    return $link;
 }
 
