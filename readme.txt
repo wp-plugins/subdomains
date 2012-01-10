@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Subdomains ===
 Contributors: pankajanupam
 Tags: subdomains, categories, subdomain
 Requires at least: 2.8
