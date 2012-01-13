@@ -49,6 +49,11 @@ None
 
 == Changelog ==
 
+= 0.5 =
+add support for www versions urls
+
+= 0.4 =
+
 = 0.3 =
 remove double backslash
 add child categories support

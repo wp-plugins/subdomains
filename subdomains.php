@@ -3,7 +3,7 @@
 Plugin Name: Subdomains
 Plugin URI: http://pankajanupam.in/wordpress-plugins/subdomains/
 Description: Use selecttive categories as subdomain
-Version: 0.4
+Version: 0.5
 Author: PANKAJ ANUPAM
 Author URI: http://pankajanupam.in
 
@@ -118,14 +118,15 @@ $rules = array ();
 }
 
 function sub_category_link( $link, $term_id ) {
+    $link = str_replace('www.','',$link);
     $link = preg_replace('/(?<=http\:\/\/)([a-z0-9_\-\.]+)\/category(.*)\/([a-z0-9_\-]+)/','$3.$1', $link);
     return $link;
 }
 
 function sub_post_link( $link, $id ){
+   $link = str_replace('www.','',$link);
    $link = preg_replace('/(?<=http\:\/\/)([a-z0-9_\-\.]+)\/(.*)\/([a-z0-9\-\_]+)\/([a-z0-9\-\_]+)/','$3.$1/$4', $link);
    $link = preg_replace('/(?<=http\:\/\/)([a-z0-9_\-\.]+)\/([a-z0-9\-\_]+)\/([a-z0-9\-\_]+)/','$2.$1/$3', $link);
    return $link;
 }
-
 ?>
