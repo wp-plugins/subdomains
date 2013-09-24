@@ -63,6 +63,9 @@ I hope it helps …
 None
 
 == Changelog ==
+= 1.0.2 =
+update plugin setup steps
+
 = 1.0.1 =
 change post url to subdomain url
 
