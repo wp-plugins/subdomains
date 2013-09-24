@@ -2,7 +2,7 @@
 Contributors: pankajanupam
 Tags: subdomains, categories, subdomain
 Requires at least: 2.8
-Tested up to: 3.3.1
+Tested up to: 3.6.1
 
 Subdomains allows users to setup there main categories as subdomains. It's a lite and fast code.
 
@@ -48,18 +48,21 @@ My blog is based on this plugin: http://pankajanupam.com
 None
 
 == Changelog ==
+= 1.0.0 =
+add admin panel option menu to select categories
 
 = 0.5 =
 add support for www versions urls
 
 = 0.4 =
+add custom taxonomy support
 
 = 0.3 =
-remove double backslash
+remove double backslash issue
 add child categories support
 
 = 0.2 =
-add tags
+add tags support
 
 = 0.1 =
 Beta Release
