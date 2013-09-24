@@ -48,6 +48,9 @@ My blog is based on this plugin: http://pankajanupam.com
 None
 
 == Changelog ==
+= 1.0.1 =
+change post url to subdomain url
+
 = 1.0.0 =
 add admin panel option menu to select categories
 
