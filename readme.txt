@@ -23,8 +23,9 @@ You can install Subdomains directly from the WordPress admin panel.
 
 	Click to install. 
 	
-	Once installed, activate and it is functional.
+	Once installed, activate, setup wildcard subdomain and it is functional.
 
+        Finally to choose which categories should be a subdomains goto Settings > Subdomain Settings 
 
 Manual Installation Subdomains plugin:
 
@@ -32,7 +33,9 @@ Manual Installation Subdomains plugin:
 
     Upload the full extracted folder to the /wp-content/plugins/ directory
 
-    Activate the plugin through the 'Plugins' menu in WordPress.
+    Activate the plugin through the 'Plugins' menu in WordPress and setup wildcard subdomain.
+
+Please check FAQ to wildcard subdomain setup step.
 
 You're done! The Plugin ready to use according to the directions in the description.
 
@@ -42,6 +45,18 @@ You're done! The Plugin ready to use according to the directions in the descript
 = Where can I see this in action =
 
 My blog is based on this plugin: http://pankajanupam.com
+
+= How to setup wildcard subdomain? =
+
+1- Goto : cPanel > Subdomains
+
+2- Crease a new subdomain as below :
+Subdomain : *
+Document Root : public_html
+
+then press the create button and you R done.
+
+I hope it helps …
 
 == Screenshots ==
 
