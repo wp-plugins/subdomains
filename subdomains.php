@@ -107,7 +107,7 @@ class PA_Subdomain extends PA_Subdomain_Options { //extends option class for set
      */
     public function rewrite_rules_array($rules) {
 
-        if (!$this->current_subdomain_is_category()) {
+        if ($this->current_subdomain_is_category()) {
             $rules = $this->category_rewrite_rules($this->rules);
         }
         
