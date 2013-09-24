@@ -4,7 +4,7 @@
   Plugin Name: Subdomains
   Plugin URI: http://pankajanupam.in/wordpress-plugins/subdomains/
   Description: Use selecttive categories as subdomain
-  Version: 1.0.0
+  Version: 1.0.1
   Author: PANKAJ ANUPAM
   Author URI: http://pankajanupam.in
 
@@ -43,9 +43,12 @@ class PA_Subdomain extends PA_Subdomain_Options { //extends option class for set
      */
     public $query_var;
     
+    public $rules;
+
     public function __construct() {
         parent::__construct();
-
+        
+        $this->rules = array();
         $this->query_var = 'category_name';
         
         // add action 
@@ -66,9 +69,11 @@ class PA_Subdomain extends PA_Subdomain_Options { //extends option class for set
      */
     public function add_filters() {
 
+        add_filter( 'post_rewrite_rules', array(&$this,'post_rewrite_rules') );
+        
         //return all rewite rules
         add_filter('rewrite_rules_array', array(&$this, 'rewrite_rules_array'));
-
+        
         //return category rewite rules
         // add_filter('category_rewrite_rules', array(&$this, 'category_rewrite_rules'));
 
@@ -76,7 +81,7 @@ class PA_Subdomain extends PA_Subdomain_Options { //extends option class for set
 
         //add_filter( 'root_rewrite_rules', array(&$this,'root_rewrite_rules') );
         
-        //add_filter( 'post_link', array(&$this, 'post_link'), 10, 2 );
+        add_filter( 'post_link', array(&$this, 'post_link'), 10, 2 );
     }
 
     /**
@@ -102,8 +107,8 @@ class PA_Subdomain extends PA_Subdomain_Options { //extends option class for set
      */
     public function rewrite_rules_array($rules) {
 
-        if ($this->current_subdomain_is_category()) {
-            $rules = $this->category_rewrite_rules();
+        if (!$this->current_subdomain_is_category()) {
+            $rules = $this->category_rewrite_rules($this->rules);
         }
         
         return $rules;
@@ -125,9 +130,8 @@ class PA_Subdomain extends PA_Subdomain_Options { //extends option class for set
         return $link;
     }
 
-    function category_rewrite_rules() {
+    function category_rewrite_rules($rules = array()) {
 
-        $rules = array();
         $rules["feed/(feed|rdf|rss|rss2|atom)/?$"] = "index.php?" . $this->query_var . "=" . $this->categor_slug . "&feed=\$matches[1]";
         $rules["(feed|rdf|rss|rss2|atom)/?$"] = "index.php?" . $this->query_var . "=" . $this->categor_slug . "&feed=\$matches[1]";
         $rules["page/?([0-9]{1,})/?$"] = "index.php?" . $this->query_var . "=" . $this->categor_slug . "&paged=\$matches[1]";
@@ -146,6 +150,11 @@ class PA_Subdomain extends PA_Subdomain_Options { //extends option class for set
         $link = $link.'/'.$post->post_name;
 
         return $link;
+    }
+    
+    function post_rewrite_rules($rules) {
+        $this->rules = $rules;
+        return $rules;
     }
 
     public function current_subdomain_is_category() {
