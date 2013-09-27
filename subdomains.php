@@ -120,7 +120,7 @@ class PA_Subdomain extends PA_Subdomain_Options { //extends option class for set
 
     public function category_link($category_link, $term_id) {
         
-        if( ! in_array($term_id, $this->options['subdomain_cat'] ) ) {
+        if( ! @in_array($term_id, $this->options['subdomain_cat'] ) ) {
             return $category_link;
         }
         

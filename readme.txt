@@ -63,6 +63,12 @@ I hope it helps …
 None
 
 == Changelog ==
+= 1.0.4 =
+Fix in array null value issue
+
+= 1.0.3 =
+Fix post name issue
+
 = 1.0.2 =
 update plugin setup steps
 
