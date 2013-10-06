@@ -145,6 +145,10 @@ class PA_Subdomain extends PA_Subdomain_Options { //extends option class for set
         $category = get_the_category(); 
         
         if( !$category[0]->slug ) return $post_link;
+       
+        if( ! @in_array($category[0]->cat_ID, $this->options['subdomain_cat'] ) ) {
+            return $post_link;
+        }
         
         $link = $this->get_subodmin_link($category[0]->slug);
         $link = $link.'/'.$post->post_name;
