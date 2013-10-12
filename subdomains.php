@@ -4,7 +4,7 @@
   Plugin Name: Subdomains
   Plugin URI: http://pankajanupam.in/wordpress-plugins/subdomains/
   Description: Use selecttive categories as subdomain
-  Version: 1.0.5
+  Version: 1.0.6
   Author: PANKAJ ANUPAM
   Author URI: http://pankajanupam.in
 
@@ -151,7 +151,7 @@ class PA_Subdomain extends PA_Subdomain_Options { //extends option class for set
         }
         
         $link = $this->get_subodmin_link($category[0]->slug);
-        $link = $link.'/'.$post->post_name;
+        $link = $link.'/'.$post->post_name.'/';
 
         return $link;
     }
