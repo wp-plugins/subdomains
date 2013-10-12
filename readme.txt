@@ -63,6 +63,9 @@ I hope it helps …
 None
 
 == Changelog ==
+=1.0.5=
+Fix paging issue
+
 = 1.0.4 =
 Fix in array null value issue
 
