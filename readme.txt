@@ -2,7 +2,7 @@
 Contributors: pankajanupam
 Tags: subdomains, categories, subdomain
 Requires at least: 2.8
-Tested up to: 3.6.1
+Tested up to: 4.1
 
 Subdomains allows users to setup there main categories as subdomains. It's a lite and fast code.
 
