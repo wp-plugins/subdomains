@@ -2,11 +2,11 @@
 
 /*
   Plugin Name: Subdomains
-  Plugin URI: http://pankajanupam.in/wordpress-plugins/subdomains/
+  Plugin URI: http://pankajanupam.com/wordpress-plugins/subdomains/
   Description: Use selecttive categories as subdomain
-  Version: 1.0.6
-  Author: PANKAJ ANUPAM
-  Author URI: http://pankajanupam.in
+  Version: 2.0
+  Author: BigBrother
+  Author URI: http://pankajanupam.com
 
  * LICENSE
   Copyright 2011 PANKAJ ANUPAM  (email : mymail.anupam@gmail.com)
